@@ -1,0 +1,10 @@
+/Auto_Project-20260228T091341Z-1-001/
+
+/backend/.venv/
+/backend/app/__pycache__/
+.env
+
+/frontend/node_modules/
+/frontend/build/
+/frontend/dist/
+/frontend/package-lock.json
