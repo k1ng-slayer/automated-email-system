@@ -1,13 +1,6 @@
 import type { SendResponse, SharedFieldState } from "../types/email";
 
-const rawBaseUrl = import.meta.env.VITE_BACKEND_URL?.trim() ?? "";
-const API_BASE_URL = rawBaseUrl.endsWith("/")
-  ? rawBaseUrl.slice(0, -1)
-  : rawBaseUrl;
-
-if (!API_BASE_URL) {
-  throw new Error("VITE_BACKEND_URL is not set.");
-}
+const API_BASE_URL = `${import.meta.env.VITE_BACKEND_URL}/api`;
 
 async function parseResponse(response: Response): Promise<SendResponse> {
   const payload = await response.json();
